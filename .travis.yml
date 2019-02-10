@@ -8,3 +8,8 @@ node_js:
 branches:
   only:
     - master
+deploy:
+  provider: heroku
+  app: "project-todo1"
+  api_key:
+    secure: "c83b7a9c-f009-4369-b49d-761b1d7704f7"
