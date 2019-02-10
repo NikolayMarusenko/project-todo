@@ -1,2 +1,9 @@
+sudo: false
+
 language: node
-node: '8'
+node_js:
+  - 9
+
+branches:
+  only:
+    - master
