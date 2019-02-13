@@ -1,6 +1,9 @@
 
 sudo: false
 
+services:
+- docker
+
 language: node_js
 node_js:
   - 9
@@ -8,3 +11,4 @@ node_js:
 branches:
   only:
     - master
+script: nosetests
