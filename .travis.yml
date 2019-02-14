@@ -18,7 +18,7 @@ env:
  - secure: "NR2mv2l04CZIt5rt65HJVsW5YWapQcohOtt8/jQJIWBzJoE7feM0/ZRSRtF8VBN2GI0xofAbbHN+x6a5VCaSH61LB9/xKxGePXrtlB0ih0sT0gfmJsYEysEx9qRI1MNiR8loHgvQM41E3QRNHqBjhHE3i4nKsvgWOwmo6jaYyVxTGQc8GdGx7mf6x0EggfSLC3HdQkEa6aIpLOUAoWlZssJ9BN2vTedd8E8Yf2xb9sskJtOt7XDQMmQ1e9LUEQi5n1wNHiR1V/Pwo1ybW6Be2qIZep4KOECGAHjw4QsUAYc94dH5GPnRnpcWf1gJldH8g3PGaPg42Mcj0jLt9ZKsjAmyeKByqZE0HCKUexU31GmwgmRWrptKbUdQrwGFRUswMndDqWM/YBmGXSa8HaEfy7F+nPfkF6KVuW5Op9fTZcOQ63eDocM+UsrOHDL2x6WIioVGn8quDDp1/XpzGkcwhwZNcohJ/9BsStHkHBYlQgh0ZKSsRCtyub6Y7BVY/6JcHE70hdqZeHlGX7777tY+cpnVs4Qdm4nOsn/3vSrsQk36YsCsNpx79P/w6DhE+YsvDx/To4Q4XeKnw6kzeziNe/cJPP9xhxMnKaUpv2bcs5nTPeBb8y2gQricfbxf81Mcj7R3gzo+xMeO3ktJ9LZ4kZy7xs45bvxgHk5cpWcRFGA="
  - COMMIT=${TRAVIS_COMMIT::8}
 after_success:
- - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+ - docker login -u $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
  - export REPO=1545662258668/node1
  - export TAG='if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi'
  - docker build -f Dockerfile -t $REPO:$COMMIT .
