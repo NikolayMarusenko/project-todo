@@ -25,8 +25,6 @@ after_success:
 before_install:
 - openssl aes-256-cbc -K $encrypted_7dfb4f4e109f_key -iv $encrypted_7dfb4f4e109f_iv
   -in deploy_key.enc -out ./deploy_key -d
-
-
  deploy:
  provider: script
  skip_cleanup: true
