@@ -30,6 +30,6 @@ before_install:
  deploy:
  provider: script
  skip_cleanup: true
- script: chmod 600 deploy_key && ssh -o StrictHostKeyChecking=no -i deploy_key ubuntu@<34.73.211.231> ./deploy.sh
+ script: chmod 600 deploy_key && ssh -o StrictHostKeyChecking=no -i deploy_key nik@<34.73.211.231> ./deploy.sh
  on:
    branch: master
