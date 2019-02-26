@@ -4,8 +4,9 @@ node('ins1') {
     stage('Clone repository locally') {
        
         checkout scm
-
-    }
+  
+    } 
+	
     stage('Build image') {
        
         app = docker.build("1545662258668/node1")
