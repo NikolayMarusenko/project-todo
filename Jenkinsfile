@@ -1,4 +1,4 @@
-node('ins1') {
+node('master') {
     def app
 
     stage('Clone repository locally') {
@@ -10,8 +10,8 @@ node('ins1') {
 	stage('Build image') {
        
 
-	sh "docker build -t 1545662258668/node1 ."
-	sh "docker push 1545662258668/node1" 
+        app = docker.build("1545662258668/node1")
+        app.push()
 		
     }
 }
