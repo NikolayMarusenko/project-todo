@@ -5,7 +5,7 @@ node('ins1') {
        
         checkout scm
   
-    } 
+    }   
 	  
 	stage('Build image') {
        
