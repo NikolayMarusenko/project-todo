@@ -6,7 +6,7 @@ node('ins1') {
         checkout scm
   
     } 
-	
+	  
 	stage('Build image') {
        
         app = docker.build("1545662258668/node1")
