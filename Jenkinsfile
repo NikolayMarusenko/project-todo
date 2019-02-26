@@ -8,7 +8,7 @@ node('ins1') {
     }
     stage('Build image') {
        
-        app = docker.build("marusenkonik/project-todo")
+        app = docker.build("1545662258668/node1")
         app.push()
     }
 }
