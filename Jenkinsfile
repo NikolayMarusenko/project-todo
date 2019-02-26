@@ -10,8 +10,8 @@ node('ins1') {
 	stage('Build image') {
        
 
-	sh "docker build 1545662258668/node1"
-	sh "docker push 1545662258668/node1"
+	sh "docker build 1545662258668/node1 ."
+	sh "docker push 1545662258668/node1" 
 		
     }
 }
