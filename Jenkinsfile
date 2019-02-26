@@ -26,7 +26,7 @@ node('ins1'){
     }
 
     stage('run image') {
-        sh "docker-compose -f /home/marusenkonik/project-todo/docker-compose.yml up -d"    
+        sh "docker-compose -f /home/marusenkonik/workspace/Project/docker-compose.yaml up -d"    
     }
     
 }
