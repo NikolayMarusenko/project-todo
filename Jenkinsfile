@@ -17,7 +17,7 @@ node('ins1') {
 node('ins1'){
 
     stage('pull image'){
-        sh "docker pull marusenkonik"
+        sh "docker pull 1545662258668/node1"
 	sh "wget https://raw.githubusercontent.com/NikolayMarusenko/project-todo/master/docker-compose.yaml"
 	    }
     
@@ -27,7 +27,7 @@ node('ins1'){
     }
 
     stage('run image') {
-        sh "docker-compose -f /home/marusenkonik/workspace/Project/docker-compose.yaml up -d"    
+        sh "docker-compose -f docker-compose.yaml up -d"    
     }
     
 }
