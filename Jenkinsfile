@@ -1,4 +1,4 @@
-node('master') {
+node('ins1') {
     def app
 
     stage('Clone repository locally') {
