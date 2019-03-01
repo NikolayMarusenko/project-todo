@@ -4,19 +4,22 @@ node('deploy') {
     stage('Clone repository locally') {
        
         checkout scm
-
-    }
-    stage('Build image') {
+  
+    }   
+	  
+	stage('Build image') {
        
+
         app = docker.build("1545662258668/node1")
         app.push()
+		
     }
 }
 
 node('deploy'){
 
     stage('pull image'){
-        sh "docker pull marusenkonik"
+        sh "docker pull 1545662258668/node1"
 	sh "wget https://raw.githubusercontent.com/NikolayMarusenko/project-todo/master/docker-compose.yaml"
 	    }
     
@@ -26,7 +29,7 @@ node('deploy'){
     }
 
     stage('run image') {
-        sh "docker-compose -f /home/marusenkonik/workspace/Project/docker-compose.yaml up -d"    
+        sh "docker-compose -f docker-compose.yaml up -d"    
     }
     
 }
