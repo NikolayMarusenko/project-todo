@@ -1,4 +1,4 @@
-node('ins1') {
+node('deploy') {
     def app
 
     stage('Clone repository locally') {
@@ -13,7 +13,7 @@ node('ins1') {
     }
 }
 
-node('ins1'){
+node('deploy'){
 
     stage('pull image'){
         sh "docker pull marusenkonik"
