@@ -1,4 +1,4 @@
-node('deploy') {
+node('node') {
     def app
 
     stage('Clone repository locally') {
@@ -16,7 +16,7 @@ node('deploy') {
     }
 }
 
-node('deploy'){
+node('node'){
 
     stage('pull image'){
         sh "docker pull 1545662258668/node1"
